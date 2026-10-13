@@ -1,0 +1,59 @@
+/* Rootvale – gemeinsamer Stil aller Seiten (Farben wie im Spiel) */
+:root {
+  --papier: #f4ead5;
+  --papier-hell: #fbf5e8;
+  --holz: #5a3a22;
+  --holz-hell: #8a6446;
+  --fluss: #2e8c8a;
+  --kuerbis: #ef8a1c;
+  --rand: #e3d3b4;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--holz);
+  font: 17px/1.6 ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+}
+a { color: var(--fluss); }
+a:hover { color: var(--holz); }
+
+header.leiste {
+  max-width: 880px; margin: 0 auto; padding: 18px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+header.leiste .marke { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--holz); font-weight: 800; font-size: 20px; }
+header.leiste .marke img { width: 36px; height: 36px; }
+header.leiste nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 15px; }
+header.leiste nav a { text-decoration: none; color: var(--holz-hell); font-weight: 600; }
+header.leiste nav a:hover, header.leiste nav a[aria-current] { color: var(--fluss); }
+
+main { max-width: 720px; margin: 0 auto; padding: 16px 20px 64px; }
+h1 { font-size: 32px; line-height: 1.2; margin: 8px 0 6px; }
+h2 { font-size: 20px; margin: 32px 0 8px; color: var(--fluss); }
+p, li { margin: 6px 0; }
+.stand { opacity: .75; font-size: 14px; }
+
+.held { text-align: center; padding: 32px 0 8px; }
+.held img { width: 148px; height: 148px; filter: drop-shadow(0 10px 18px rgba(90,58,34,.25)); }
+.held h1 { font-size: 44px; margin-top: 18px; }
+.held .unterzeile { font-size: 20px; color: var(--holz-hell); margin: 0 auto; max-width: 30ch; }
+.knopf {
+  display: inline-block; margin-top: 22px; padding: 12px 22px; border-radius: 999px;
+  background: var(--holz); color: var(--papier-hell); text-decoration: none; font-weight: 700;
+}
+.knopf.leise { background: transparent; color: var(--holz); border: 2px solid var(--holz); }
+.hinweis { font-size: 14px; color: var(--holz-hell); margin-top: 10px; }
+
+.karten { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 36px; }
+.karte { background: var(--papier-hell); border: 2px solid var(--rand); border-radius: 18px; padding: 16px 18px; }
+.karte h3 { margin: 0 0 4px; font-size: 17px; color: var(--holz); }
+.karte p { margin: 0; font-size: 15px; color: var(--holz-hell); }
+
+details { background: var(--papier-hell); border: 2px solid var(--rand); border-radius: 14px; padding: 12px 16px; margin: 10px 0; }
+details summary { cursor: pointer; font-weight: 700; }
+details p { margin-top: 8px; }
+
+footer { max-width: 720px; margin: 0 auto; padding: 24px 20px 40px; font-size: 14px; color: var(--holz-hell); border-top: 2px solid var(--rand); }
+footer a { color: var(--holz-hell); margin-right: 14px; }
